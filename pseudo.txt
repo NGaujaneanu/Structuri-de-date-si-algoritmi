@@ -1,0 +1,44 @@
+Insert(ora, min, sec){
+tempNode = create_node(ora,min,sec) // creez nodul pe care doresc sa-l inserez
+//creez nodul curent si nodul parinte pentru a ma ajuta sa parcurg arborele
+current_node = create_node() 
+parent_node = create_node()
+
+if root_node == NULL
+	root_node = tempNode //daca arborele este gol tempNode va devenii root
+
+else 
+current = root // incep parcurgerea
+parent = null
+
+while true
+	parent = curent // parcurg arborele si actualizez nodurile
+	if( timp < parent.timp) // daca timpul e mai mic trebuie sa merg la stanga
+		current = current->left
+		if current == NULL //daca nu mai am ce sa parcurg inserez elementul
+			insert(tempNode)
+				return
+	else //merg in dreapta
+		if current == null
+			insert(tempNode)
+				return
+
+
+Search(ora,min,sec){
+current_node=root
+while(current.timp != timp)
+	if(timp < current.timp) // daca timpul e mai mic merg la stanga
+		current = current->left
+	else
+		current = current->right
+
+	if current == null //daca am ajuns la final si nu am gasit elementul intorc null
+		return null
+return current;
+}
+
+Inorder_traversal(root_node){
+if root != null
+	inorder_traversal(root.left) // parcurg tot arborele din stanga
+	inorder_traversal(root.left) // parcurg tot arborele din dreapta
+}
